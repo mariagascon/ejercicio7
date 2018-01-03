@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cálculo días del año</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="cssdias.css">
+    <script src="funciones.js"></script>
+	<link rel="stylesheet" href ="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+</head>
+<body class="fondo">
+    <!-Primer encabezado->
+    <h2 class="titulouno">Cálculo de los días de la semana</h2>
+    <!-Segundo encabezado->
+    <h3 class="titulodos">Introduce una fecha y obtendrás qué día de la semana es</h3>
+    <!-Comienza javascript->
+    <script>
+        //PARTE DEL CÓDIGO EN LA QUE EL USUARIO INTRODUCE LAS VARIABLES
+        var anyo = prompt("Introduce un año comprendido entre 1700 y 2299"); //Introduce el año deseado
+        while (anyo>2299 || anyo<1700) { //Esta condición no permite poner años inferiores a 1700 o superiores a 2299
+            anyo = prompt ("¡El año no es válido! Debe ser mayor a 1700 y menor a 2299");
+        }
+
+        var mes = prompt("Introduce un mes");//Introduce el mes deseado 
+
+        //Calcula día máximo en función del mes y el año
+        var dia_max = 0; //Inicialización
+        dia_max = calculadiamaximo(mes, anyo);
+        
+        var dia = prompt("Introduce un día comprendido entre el 1 y el "+dia_max);//Introduce el día deseado
+        while (dia<1 || dia>dia_max) {
+            dia = prompt("¡El día no es válido! El día debe estar comprendido entre el 1 y el "+dia_max); //Esta condición sólo permite poner días entre el 1 y el 31
+        }
+        //Resultado final
+        document.write("El "+dia+" del "+mes+" de "+anyo+" es "+calculodiasemana(anyo,mes,dia));
+    </script>
+</body>
+</html>

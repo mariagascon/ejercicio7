@@ -1,0 +1,20 @@
+.fondo {
+    background-color: rgb(177, 106, 106);
+    margin: 50px;
+    text-align: center;
+}
+
+.titulouno {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(173, 173, 241);
+    text-decoration: underline;
+}
+
+.titulodos {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    font-size: 20px;
+}
+
